@@ -4,7 +4,7 @@ package ar.com.ghostix.lib.arraylib;
 import java.util.Scanner;
 import java.lang.Math;
 import java.util.Stack;
-//import ar.com.ghostix.lib.asciimenus.SubMenu;
+import ar.com.ghostix.lib.asciimenus.SubMenu;
 import java.lang.reflect.Array;
 import java.util.Comparator;
 //STANDALONE VERSION
@@ -13,7 +13,7 @@ public class ArrayUtils <T extends Comparable<T>>{
     //Generic array
     private T[] array;
     public ArrayUtils(Class<T> type, int size){
-        //We instanciate the array
+        //We instantiate the array
         array = (T[]) Array.newInstance(type, size);
        
     }
@@ -157,15 +157,15 @@ public class ArrayUtils <T extends Comparable<T>>{
         array[i] = array[j];
         array[j] = temp;
     }
-    //public void run(Scanner scan){
-        //String[] customOptions = {""};
-        //String[] hiddenOptions = {"length", "swap", "medianOfThree", "Partition", "quickSort", "in", "binarySearch"};
-        //SubMenu menu = new SubMenu("ArrayUtils", this, false, customOptions, hiddenOptions);
-        //int option = 0;
-        //while(option!=menu.getExit()){
-          //  option = menu.run(scan);
-        //}
-    //}
+    public void run(Scanner scan){
+        String[] customOptions = {""};
+        String[] hiddenOptions = {"length", "swap", "medianOfThree", "Partition", "quickSort", "in", "binarySearch"};
+        SubMenu menu = new SubMenu("ArrayUtils", this, false, customOptions, hiddenOptions);
+        int option = 0;
+        while(option!=menu.getExit()){
+            option = menu.run(scan);
+        }
+    }
     
     
     
