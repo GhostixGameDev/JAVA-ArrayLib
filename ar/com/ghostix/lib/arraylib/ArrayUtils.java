@@ -152,7 +152,7 @@ public class ArrayUtils <T extends Comparable<T>>{
         return middle;
     }
 
-    private static <T> void swap(T[] array, int i, int j) {
+    public static <T> void swap(T[] array, int i, int j) {
         T temp = array[i];
         array[i] = array[j];
         array[j] = temp;
