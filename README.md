@@ -20,6 +20,10 @@ Instance methods: <br />
 <ul>
   <li>getArray(): Returns the array.</li>
   <li>setArray(array): Overwrites the array.</li>
+  <li>get(index): Returns the value at index.</li>
+  <li>set(index, newValue): Changes the value at index.</li>
+  <li>append(newValue): Expands the array one slot and gives it the value.</li>
+  <li>delete(valueToDelete): Searches the value and deletes it, reducing one slot the array. </li>
   <li>changeSize(int newSize): Expands or decreases the array but keeping all the values (Except the ones out of bounds if decreased).</li>
   <li>length(): Returns the array length.</li>
   <li>sort(): Sorts itself using quickSort</li>
