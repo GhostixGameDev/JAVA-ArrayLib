@@ -10,6 +10,7 @@ ArrayUtils&lt;Class&gt; example = new ArrayUtils(Class, int size);
 Static methods: <br />
 <ul>
   <li>binarySearch(array, objective): Returns the int position of the objective in the array. If not found returns -1</li>
+  <li>linearSearch(array, objective): Returns the int position of the objective in the array. If not found returns -1</li>
   <li>quickSort(array): Returns a sorted array.</li>
   <li>swap(array, int i, int j): Swaps two values in an array.</li>
   <li>in(objective, array): Returns true if the objective is inside the array.</li>
@@ -24,8 +25,8 @@ Instance methods: <br />
   <li>set(index, newValue): Changes the value at index.</li>
   <li>[!WARNING] clean(tempValue): Leaves null the array.</li>
   <li>append(newValue): Expands the array one slot and gives it the value.</li>
-  <li>delete(valueToDelete): Searches the value and deletes it, reducing one slot the array. </li>
-  <li>deleteAll(valueToDelete): Searches the value and deletes it from all positions found, reducing slots of the array. </li>
+  <li>delete(valueToDelete, boolean isSorted): Searches the value and deletes it, reducing one slot the array. </li>
+  <li>deleteAll(valueToDelete, boolean isSorted): Searches the value and deletes it from all positions found, reducing slots of the array. </li>
   <li>fill(value): Fills all the array positions with the value you give. </li>
   <li>changeSize(int newSize): Expands or decreases the array but keeping all the values (Except the ones out of bounds if decreased).</li>
   <li>length(): Returns the array length.</li>
