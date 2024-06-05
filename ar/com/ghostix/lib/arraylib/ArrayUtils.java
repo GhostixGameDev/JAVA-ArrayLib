@@ -4,7 +4,7 @@ package ar.com.ghostix.lib.arraylib;
 import java.util.Scanner;
 import java.lang.Math;
 import java.util.Stack;
-import ar.com.ghostix.lib.asciimenus.SubMenu;
+//import ar.com.ghostix.lib.asciimenus.SubMenu;
 import java.lang.reflect.Array;
 import java.util.Comparator;
 import java.util.Arrays;
@@ -218,15 +218,15 @@ public class ArrayUtils <T extends Comparable<T>>{
         }
         
     }
-    public void run(Scanner scan){
-        String[] customOptions = {""};
-        String[] hiddenOptions = {"length", "swap", "medianOfThree", "Partition", "quickSort", "in", "binarySearch"};
-        SubMenu menu = new SubMenu("ArrayUtils", this, false, customOptions, hiddenOptions);
-        int option = 0;
-        while(option!=menu.getExit()){
-            option = menu.run(scan);
-        }
-    }
+   // public void run(Scanner scan){
+     //   String[] customOptions = {""};
+       // String[] hiddenOptions = {"length", "swap", "medianOfThree", "Partition", "quickSort", "in", "binarySearch"};
+        //SubMenu menu = new SubMenu("ArrayUtils", this, false, customOptions, hiddenOptions);
+        //int option = 0;
+        //while(option!=menu.getExit()){
+          //  option = menu.run(scan);
+        //}
+    //}
     
     
     
