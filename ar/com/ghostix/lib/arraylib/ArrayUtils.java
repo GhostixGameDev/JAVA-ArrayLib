@@ -4,7 +4,7 @@ package ar.com.ghostix.lib.arraylib;
 import java.util.Scanner;
 import java.lang.Math;
 import java.util.Stack;
-//import ar.com.ghostix.lib.asciimenus.SubMenu;
+import ar.com.ghostix.lib.asciimenus.SubMenu;
 import java.lang.reflect.Array;
 import java.util.Comparator;
 //STANDALONE VERSION
@@ -81,9 +81,13 @@ public class ArrayUtils <T extends Comparable<T>>{
     }
     public void delete(T valueToDelete){
         int index = binarySearch(getArray(), valueToDelete);
+        int length = length();
         if(index!=-1){
-            swap(getArray(), index, length()-1);
+            swap(getArray(), index, length-1);
             changeSize(length()-1);
+            for(int i = index; i < length-2; i++){
+                swap(getArray(), i, i+1);
+            }
         }else{
             System.out.println("That element doesnt exist.");
         }
@@ -101,7 +105,7 @@ public class ArrayUtils <T extends Comparable<T>>{
         //Binary search algorithm, we divide and conquer, we divide it in half and search from left and right until they met.
         //Then we will be able to find our objective.
         int lowest = 0;
-        int highest = array.length - 1;
+        int highest = array.length; 
         //We use the iterative method to save memory and avoid Stack overflow issues.
         while (lowest <= highest) {
             int mid = lowest + (highest - lowest) / 2;
@@ -180,15 +184,15 @@ public class ArrayUtils <T extends Comparable<T>>{
         array[i] = array[j];
         array[j] = temp;
     }
-    //public void run(Scanner scan){
-       // String[] customOptions = {""};
-       // String[] hiddenOptions = {"length", "swap", "medianOfThree", "Partition", "quickSort", "in", "binarySearch"};
-       // SubMenu menu = new SubMenu("ArrayUtils", this, false, customOptions, hiddenOptions);
-       // int option = 0;
-       // while(option!=menu.getExit()){
-       //     option = menu.run(scan);
-       // }
-    //4}
+    public void run(Scanner scan){
+        String[] customOptions = {""};
+        String[] hiddenOptions = {"length", "swap", "medianOfThree", "Partition", "quickSort", "in", "binarySearch"};
+        SubMenu menu = new SubMenu("ArrayUtils", this, false, customOptions, hiddenOptions);
+        int option = 0;
+        while(option!=menu.getExit()){
+            option = menu.run(scan);
+        }
+    }
     
     
     
