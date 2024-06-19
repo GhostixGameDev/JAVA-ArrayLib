@@ -11,6 +11,8 @@ Static methods: <br />
 <ul>
   <li>binarySearch(array, objective): Returns the int position of the objective in the array. If not found returns -1</li>
   <li>linearSearch(array, objective): Returns the int position of the objective in the array. If not found returns -1</li>
+  <li>append(array, newValue): Returns a new array with the new value and +1 size.</li>
+  <li>changeSize(array, newSize): Returns a new array with the new size.</li>
   <li>quickSort(array): Returns a sorted array.</li>
   <li>swap(array, int i, int j): Swaps two values in an array.</li>
   <li>in(objective, array): Returns true if the objective is inside the array.</li>
