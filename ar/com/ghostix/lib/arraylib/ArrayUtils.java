@@ -196,10 +196,11 @@ public class ArrayUtils <T extends Comparable<T>>{
         
         
     }
-    public static <T> void append(T[] array, T valueToAdd){
+    public static <T> T[] append(T[] array, T valueToAdd){
         int length = array.length;
         array = changeSize(array, length+1);
         array[length-1] = valueToAdd;
+        return array;
     }
     //public void run(Scanner scan){
        // String[] customOptions = {""};
